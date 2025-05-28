@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/m4rkux/wifiqr/internal/cli"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	cli.Execute()
 }
