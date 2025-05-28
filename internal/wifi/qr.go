@@ -16,8 +16,11 @@ func ShowQRCode(ssid, password string) error {
 		return fmt.Errorf("failed to generate QR code: %w", err)
 	}
 
+	fmt.Printf("\nSSID: %s\n", ssid)
+
 	// Print as ASCII to terminal
 	fmt.Println(qr.ToString(false)) // false = do not invert, prints light on dark
+	fmt.Println("Password: ", password)
 
 	return nil
 }

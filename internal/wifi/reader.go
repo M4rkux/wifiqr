@@ -20,7 +20,7 @@ type WiFiNetwork struct {
 func GetNetworks() []WiFiNetwork {
 	files, err := os.ReadDir(nmPath)
 	if err != nil {
-		log.Printf("Failed to read NetworkManager directory: %v", err)
+		log.Fatalf("Failed to read NetworkManager directory: %v", err)
 		return nil
 	}
 	var networks []WiFiNetwork
