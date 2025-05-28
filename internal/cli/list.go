@@ -13,7 +13,7 @@ var listCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		networks := wifi.GetNetworks()
 		for _, n := range networks {
-			fmt.Printf("SSID: %s, Password: %s\n", n.SSID, n.Password)
+			fmt.Println(n.SSID)
 		}
 
 	},
